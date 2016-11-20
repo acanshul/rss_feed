@@ -1,0 +1,10 @@
+<h1>FeedEntries#index</h1>
+<p>Find me in app/views/feed_entries/index.html.erb</p>
+
+<% @feed_entries.each do |entry| %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= link_to entry.title, entry , :target => "_blank"%> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
+    </div>
+  </div>
+<% end %>
